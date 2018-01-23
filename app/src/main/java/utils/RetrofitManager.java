@@ -11,7 +11,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitManager {
 
     private Retrofit retrofit;
-    private static final String DEFUALT_BASE_UTL="http://fangzhou.181858.com/index.php/App/Users/";
+    //private static final String DEFUALT_BASE_UTL="http://fangzhou.181858.com/index.php/App/Users/";
+    private static final String DEFUALT_BASE_UTL="http://admin-bj-test.hxsapp.com/manager/User/";
+
     //单例模式
     private static class SingleHolder{
         private static final RetrofitManager instance = new RetrofitManager(DEFUALT_BASE_UTL);

@@ -19,7 +19,7 @@ import io.reactivex.schedulers.Schedulers;
 import okhttp3.ResponseBody;
 import utils.RetrofitManager;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView tv_regitster;
     private TextView tv_forgrt_mima;
@@ -81,8 +81,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(this, "请填写必填信息", Toast.LENGTH_SHORT).show();
             return;
         } else {
-            if (!(isMobileNO(phone)) || !(password.length() >= 6 && password.length() < 25)) {
-                Toast.makeText(this, "手机号或密码格式不正确", Toast.LENGTH_SHORT).show();
+            if (!(password.length() >= 6 && password.length() < 25)) {
+                Toast.makeText(this, "用户名或密码格式不正确", Toast.LENGTH_SHORT).show();
                 return;
             } else {
                 Observable<ResponseBody> register = RetrofitManager.getDefault().create(LoginApi.class).register(phone, password);

@@ -13,6 +13,6 @@ import retrofit2.http.POST;
 public interface LoginApi {
 
     @FormUrlEncoded
-    @POST("register/")
-    Observable<ResponseBody> register(@Field("mobile") String mobile, @Field("password") String password);
+    @POST("login/")
+    Observable<ResponseBody> register(@Field("username") String mobile, @Field("password") String password);
 }
